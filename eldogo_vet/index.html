@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Dogo - Gestión Veterinaria</title>
+   <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- VISTA 1: LOGIN -->
+    <div id="login-view">
+        <div class="form-container">
+            <!-- Icono/Logo simple con la nueva paleta -->
+            <img src="https://placehold.co/100x100/39FF14/1A1A1A?text=EL+DOGO" alt="Logo de El Dogo" style="border-radius: 50%; margin-bottom: 20px; border: 3px solid #1A1A1A;">
+            <h1>Acceso Al Sistema</h1>
+            <p style="color: #1A1A1A; font-weight: bold;">(Usuario: veterinario / Contraseña: 1234)</p>
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" placeholder="veterinario">
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" placeholder="1234">
+            <button id="login-btn" class="btn primary-btn" style="width: 100%; margin-top: 20px;">Ingresar</button>
+            <p id="login-error" class="error-msg"></p>
+        </div>
+    </div>
+
+    <!-- VISTAS PRINCIPALES (Ocultas hasta login exitoso) -->
+    <div id="main-app" style="display: none;">
+    
+
+        <header>
+            <nav>
+                <span class="logo">EL DOGO</span>
+                <div class="nav-links">
+                    <button class="nav-btn" data-view="dashboard" id="nav-dashboard">INICIO</button>
+                    <button class="nav-btn" data-view="clientes" id="nav-clientes">CLIENTES</button>
+                    <button class="nav-btn" data-view="mascotas" id="nav-mascotas">MASCOTAS</button>
+                    <button id="logout-btn" class="nav-btn logout">SALIR</button>
+                </div>
+            </nav>
+        </header>
+
+        <main id="content">
+            <!-- Contenido de las vistas (Dashboard, Clientes, Mascotas) -->
+        </main>
+    </div>
+
+    <!-- Contenedor del Modal (para Confirmación y Cambio de Dueño) -->
+    <div id="modal-root"></div>
+<script type="module" src="./logica/dashboard.js"></script>
+</body>
+</html>
